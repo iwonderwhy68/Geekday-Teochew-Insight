@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Context Agent</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>B站章节助手</h1>
+
+      <label for="videoUrl">视频链接</label>
+      <input id="videoUrl" type="text" placeholder="https://www.bilibili.com/video/BV..." />
+
+      <div class="row">
+        <button id="syncTabBtn">使用当前标签页</button>
+        <button id="checkPlayerBtn">读取播放状态</button>
+      </div>
+
+      <div class="row">
+        <button id="analyzeBtn" class="primary">手动刷新章节</button>
+      </div>
+
+      <p id="playerState" class="state">播放器状态：未知</p>
+      <p id="status" class="state">等待操作</p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

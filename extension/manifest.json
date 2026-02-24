@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Bilibili Video Context Agent",
+  "version": "0.1.0",
+  "description": "Analyze Bilibili videos, generate chapters, and jump by section.",
+  "permissions": ["activeTab", "tabs", "scripting"],
+  "host_permissions": [
+    "https://www.bilibili.com/*",
+    "http://localhost:8787/*",
+    "https://api.bilibili.com/*",
+    "https://comment.bilibili.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Video Context Agent"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.bilibili.com/video/*",
+        "https://m.bilibili.com/video/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
