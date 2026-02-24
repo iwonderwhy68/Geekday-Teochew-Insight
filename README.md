@@ -12,8 +12,7 @@
 ```env
 OPENAI_API_KEY=your_api_key
 OPENAI_BASE_URL=https://api.openai.com/v1
-MODEL_NAME=gpt-4o
-TAVILY_API_KEY=your_tavily_key
+MODEL_NAME=gpt-5.2
 ```
 
 ## 3. 启动后端 (Run Backend)
